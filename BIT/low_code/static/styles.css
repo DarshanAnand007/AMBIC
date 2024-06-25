@@ -1,0 +1,189 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.mobile-screen {
+    width: 350px;
+    height: 650px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #ddd;
+}
+
+.head {
+    height: 30%;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+}
+
+.eye {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#left-eye {
+    left: 30%;
+}
+
+#right-eye {
+    right: 30%;
+}
+
+@keyframes blink {
+    0%, 20%, 60%, 100% {
+        transform: scaleY(1);
+    }
+    10%, 50% {
+        transform: scaleY(0);
+    }
+}
+
+@keyframes search {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-5px, -5px);
+    }
+    50% {
+        transform: translate(5px, -5px);
+    }
+    75% {
+        transform: translate(-5px, 5px);
+    }
+}
+
+@keyframes typing {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.blinking {
+    animation: blink 1s infinite;
+}
+
+.searching {
+    animation: search 1s infinite;
+}
+
+.typing {
+    animation: typing 0.5s infinite;
+}
+
+.body {
+    height: 70%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-window {
+    width: 90%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#messages {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.input-container {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+#userInput {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 10px;
+    margin: 0 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button#attach-button {
+    background-color: transparent;
+    font-size: 1.5em;
+}
+
+button#clear-button {
+    background-color: #ff0000;
+}
+
+button#send-button {
+    background-color: #007bff;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.bot-reply {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.bot-logo {
+    width: 30px;
+    height: 30px;
+    background-color: #007bff;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+.voice-button {
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    font-size: 1em;
+}
+
+.voice-button:hover {
+    color: #0056b3;
+}
